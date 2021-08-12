@@ -1,0 +1,304 @@
+.promotion_frame {
+    padding: 25px 0px 0px 0px;
+    flex-direction: column;
+    position: relative;
+}
+.title {
+    display: flex;
+    padding-left: 15px;
+}
+.promotion_frame .title h2, .promotion_frame .title i{
+    font-size: 23px;
+    color: #d61817;
+    margin-bottom: 20px;
+}
+
+.promotion_frame .title i{
+    margin-right: 10px;
+}
+.products {
+
+}
+#slide_proc {
+    overflow-y: scroll;
+    overflow-y: hidden;
+    padding-bottom: 40px;
+}
+.products::-webkit-scrollbar {
+    display: none;
+}
+.product {
+    position: relative;
+    width: 300px;
+    min-width: 300px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding-bottom: 8px;
+}
+.product:hover .product_img{
+    position: relative;
+    transition: 0.2s ease;
+    transform: scale(1.034) !important;
+}
+.product:hover {
+    border-radius: 4px;
+    border: 1px solid var(--border-line);
+}
+.sale_proc .product_img {
+    background-origin: content-box;
+    background-image: url("../img/banner/frame-khuyenmai.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.product_img {
+    position: relative;
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    height: 216px;
+}
+
+
+.product_img img{
+    height: 214px;
+}
+
+.sale_proc .product_img img{
+    margin-top: 33px !important;
+    max-height: 168px !important;
+}
+.sale_proc:hover .product_img img{
+    position: relative;
+    transition: 0.6s ease;
+    transform: scale(1.034) !important;
+}
+.pd-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pd-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bd-r-15 {
+    border-radius: 15px;
+}
+.center {
+    justify-content: center;
+}
+
+.middle {
+    align-items: center;
+}
+
+.txt_center {
+    text-align: center;
+}
+
+.name_proc {
+    color: var(--color-name-proc);
+    font-size: 16px;
+}
+
+.sp-bw {
+    justify-content: space-between;
+}
+
+.endow {
+    flex-direction: column;
+    position: absolute;
+    left: 15px;
+    display: flex;
+    align-items: baseline;
+    bottom: 10px;
+}
+
+.endow .installment {
+    background-color: #ea9d02;
+}
+.endow span {
+    color: white;
+    padding: 4px 6px 4px 10px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+.sale_proc .endow {
+    left: 12px !important;
+    bottom: 25px !important;
+}
+.sale_proc .endow span{
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+.endow .discount {
+    margin-top: 7px;
+    background-color: #cb1c22;
+}
+
+
+.product_detail {
+    padding: 5px 10px;
+}
+
+.price {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.promo_price div {
+    text-align: right;
+}
+
+.cost {
+    background-color: #cb1c22;
+    font-size: 18px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 600;
+    color: white;
+}
+
+.promo_price {
+    color: #919191;
+}
+
+.promo_price-value {
+    text-decoration: line-through;
+}
+
+.list_promotion {
+    margin: 0 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 10px 10px 25px 10px;
+}
+
+.promotion-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    margin-right: 10px;
+}
+.promotion-icon:hover {
+    border: 1px solid var(--border-line);
+}
+.w-h-100 {
+    width: 100%;
+    height: 100%;
+}
+
+.promotion-text {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.promotion_frame .slide_arrow{
+    width: 32px;
+    height: 32px;
+    top: 37%;
+    z-index: 10000;
+}
+
+.promotion_frame .slide_arrow-left {
+    display: none;
+    left: 10px;
+}
+
+.promotion_frame .slide_arrow-right {
+    right: 10px;
+}
+
+.promotion_frame .slide_arrow-left i, 
+.promotion_frame .slide_arrow-right i {
+    line-height: 32px;
+    font-size: 19px;
+}
+
+/* list discount */
+
+.fr_head {
+    padding: 25px 10px 10px 10px;
+    font-size: 19px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.info_device .icon {
+    height: 13px;
+    margin-right: 9px;
+}
+
+.info_device span {
+    color: #6c757d;
+    cursor: help;
+    display: inline-block;
+    margin-bottom: 9px;
+    margin-right: 10px;
+}
+
+.prod_action-hover {
+    display: none;
+    border-bottom: 1px solid var(--border-line);
+    border-left: 1px solid var(--border-line);
+    border-right: 1px solid var(--border-line);
+    position: absolute;
+    z-index: 999;
+    background-color: white;
+    width: 100%;
+    left: -1px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.prod_action-hover a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.prod_action-hover .buynow {
+    background-color: #cb1c22;
+    width: 160px;
+    margin-left: 10px;
+}
+.see_all {
+    display: none;
+}
+.prod_action-hover a {
+    font-size: 16px;
+    font-weight: 16px;
+}
+.prod_action-hover .buynow:hover {
+    background-color: #920e29;
+}
+.prod_action-hover .compare {
+    background-color: #99a2aa;
+    width: 100px;
+    margin-right: 10px;
+}
+.prod_action-hover .compare:hover {
+    background-color: #6c757d;
+}
+.product:hover .prod_action-hover {
+    display: flex;
+}
+
+.view_list {
+    margin-bottom: 30px;
+}
+
+.promotion_frame .slide_arrow {
+    outline: none;
+}
+

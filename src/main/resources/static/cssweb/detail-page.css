@@ -1,0 +1,114 @@
+#root {
+    background-color: white;
+}
+
+.breadcrumb li{
+    list-style: none;
+    float: left;
+    margin-right: 7px;
+}
+.breadcrumb li a {
+    color: #0664f9;
+}
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb {
+    height: 39px;
+    line-height: 39px;
+}
+
+.s_before::before {
+    content: "/ ";
+}
+
+.s_ok {
+    color: orange;
+}
+.s_no {
+    color: grey;
+}
+#star {
+    margin-right: 5px;
+}
+.overview {
+    color: #0664f9;
+}
+.name_prod {
+    align-items: baseline;
+}
+#name_prod {
+    font-size: 23px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.head_prod {
+    margin-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid;
+}
+#seri_prod {
+    color: #99a2aa;
+    font-size: 13px;
+}
+
+/* chat */
+.ibox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.f_chat {
+    width: 60px;
+    height: 60px;
+    background-color: #ee0a0a;
+    text-align: center;
+    margin-right: 17px;
+    cursor: pointer;
+}
+
+#close_chat {
+    position: absolute;
+    right: -1px;
+    top: 1px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: white;
+    cursor: pointer;
+}
+
+#txt_inl {
+    font-style: italic;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 105px;
+    color: white;
+    text-align: center;
+    line-height: 19px;
+}
+
+.icon_chat {
+    line-height: 60px !important;
+    color: white;
+    font-size: 31px;
+}
+
+.img_chat {
+    cursor: pointer;
+}
+
+.dt_left {
+    border-right: 1px solid;
+}

@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/img/icon.png">
-    <title>Fptshop.com.vn | Điện thoại, Laptop, Tablet, Phụ kiện chính hãng giá tốt nhất</title>
-    <link rel="stylesheet" href="/cssweb/style.css">
-    <link rel="stylesheet" href="/cssweb/sale_middle.css">
-    <link rel="stylesheet" href="/cssweb/promotion.css">
-    <link rel="stylesheet" href="/cssweb/responsive.css">
-    <link rel="stylesheet" href="/cssweb/grid.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <script src="/jsweb/router.js"></script>
+<head th:replace="fragments/head-web :: head">
+
 </head>
 <body>
     <div class="remind">
@@ -22,122 +11,7 @@
         </p>
         <a href="#" class="a_omitted">Xem chi tiết</a>
     </div>
-    <header class="header_pc">
-        <div class="container flex header_pc-top flex">
-            <div class="h_pc-left flex">
-                <div class="pc-logo">
-                    <img src="/images/img/logo-m.png" alt="">
-                </div>
-                <div class="h_bottom row no-gutters form-search">
-                    <input type="text" placeholder="Bạn muốn mua gì?" id="txtSearch">
-                    <button class="gl" id="btnSearch"><i class="far fa-search gl"></i></button>
-                </div>
-            </div>
-            <div class="h_pc-right flex">
-                <div class="hot_news h_li">
-                    <a href="#" class="a_omitted">
-                        <i class="fas fa-file-alt h_li-icon"></i>
-                        <div class="h_li-text">Thông tin hay</div>
-                    </a>
-                </div>
-                <div class="service h_li">
-                    <a href="#" class="a_omitted">
-                        <img src="/images/img/diennuoc.png" alt="">
-                        <div class="h_li-text">Thu hộ điện, nước</div>
-                    </a>
-                </div>
-                <div class="cart h_li">
-                    <a href="#" class="a_omitted">
-                        <i class="fas fa-file-alt h_li-icon"></i>
-                        <div class="h_li-text">Giỏ hàng</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div style="background-color: #252525;">
-            <div class="container flex header_pc-bottom">
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="far fa-mobile hbot_li-icon"></i>
-                    <span class="hbot_li-text">ĐIỆN THOẠI</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fas fa-laptop hbot_li-icon"></i>
-                    <span class="hbot_li-text">LAPTOP</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fab fa-apple hbot_li-icon"></i>
-                    <span class="hbot_li-text">APPLE</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="far fa-watch hbot_li-icon"></i>
-                    <span class="hbot_li-text">ĐỒNG HỒ</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fas fa-headphones hbot_li-icon"></i>
-                    <span class="hbot_li-text">PHỤ KIỆN</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fas fa-redo hbot_li-icon"></i>
-                    <span class="hbot_li-text">MÁY CŨ GIÁ RẺ</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="far fa-tablet-android hbot_li-icon"></i>
-                    <span class="hbot_li-text">TABLET</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fal fa-sim-card hbot_li-icon"></i>
-                    <span class="hbot_li-text">SIM & THẺ</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fab fa-ussunnah hbot_li-icon"></i>
-                    <span class="hbot_li-text">KHUYẾN MÃI</span>
-                </a>
-                <a href="#" class="hbot_li a_omitted">
-                    <i class="fas fa-funnel-dollar hbot_li-icon"></i>
-                    <span class="hbot_li-text">TRẢ GÓP 0%</span>
-                </a>
-                
-            </div>
-        </div>
-        
-    </header>
-    <header class="header_mobile">
-        <div class="h_top row no-gutters">
-            <div class="h_top-left">
-                <div class="h_top-right--bars">
-                    <i class="far fa-bars"></i>
-                </div>
-                <div class="h_top-left--logo">
-                    <img src="/images/img/logo-mobile.png" alt="">
-                </div>
-            </div>
-            <div class="h_top-right row no-gutters">
-                <div class="row no-gutters call">
-                    <div class="c-12">
-                        <a href="tel:0945364296" class="a_omitted" style="font-size: 11px;">Gọi mất phí</a>
-                    </div>
-                    <div class="c-12">
-                        <a href="tel:0945364296" class="a_omitted txt-call">0945364296</a>
-                    </div>
-                </div>
-                <div class="cart">
-                    <span id="num_cart">1</span>
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                
-            </div>
-        </div>
-        <div class="h_bottom row no-gutters form-search">
-            <i class="far fa-search gl"></i>
-            <input type="text" placeholder="Bạn muốn mua gì?" id="txtSearch">
-            <input type="submit" value="TÌM" id="btnSearch">
-        </div>
-        <div class="navbar_mobile-wrap">
-            <div class="nav_bar">
-
-            </div>
-        </div>
-    </header>
+    <header th:replace="fragments/header-web"></header>
     <div class="app">
         <div class="baner_top row no-gutters">
             <div class="sale-cd-tit">
@@ -1830,6 +1704,10 @@
         <!-- <div class="footer-top"></div>
         <div class="footer-bottom"></div> -->
     </footer>
+    <div th:replace="fragments/chat-web :: chat"></div>
+    <script src="/js/sockjs.min.js"></script>
+    <script src="/js/stomp.min.js"></script>
+    <script src="/js/chat.js"></script>
     <script src="/jsweb/time.js"></script>
     <script src="/jsweb/handle-ui.js"></script>
 </body>

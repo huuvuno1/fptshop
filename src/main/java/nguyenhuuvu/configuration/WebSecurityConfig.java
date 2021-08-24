@@ -22,11 +22,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     final JwtRequestFilter jwtRequestFilter;
 
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -36,36 +31,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
                 .antMatchers(
-                        "/",
-                        "/js/**",
-                        "/js_web/**",
-                        "/images/**",
-                        "/fonts/**",
-                        "/scss/**",
-                        "/vendors/**",
-                        "/js/**",
-                        "/css/**",
-                        "/css_web/**",
-                        "/img/**",
-                        "/dien-thoai/**",
-                        "/laptop/**",
-                        "/dong-ho/**",
-                        "/admin/login/**",
-                        "/authentication"
+                        "/admin/login",
+                        "/api/v1/chats/users/create"
                 );
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().disable()
+        http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/admin/**").authenticated()
+                .antMatchers("/admin/**", "/api/**").authenticated()
                 .antMatchers(HttpMethod.DELETE, "/api/v1/admin/users/**").hasAnyRole("ROLE_ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/api/v1/admin/products/**").hasAnyRole("ROLE_ADMIN")
                 .anyRequest().permitAll()
                 .and()
                 .exceptionHandling().accessDeniedPage("/access-denied")
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                    .authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()

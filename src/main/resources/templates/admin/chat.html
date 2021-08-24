@@ -2,28 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Star Admin2 </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="/vendors/css/chat.css">
-    <link rel="stylesheet" href="/vendors/feather/feather.css">
-    <link rel="stylesheet" href="/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="/vendors/typicons/typicons.css">
-    <link rel="stylesheet" href="/vendors/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="/js/select.dataTables.min.css">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="/css/vertical-layout-light/style.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="/images/favicon.png" />
+    <title>Tin nhắn</title>
+    <vu th:replace="fragments/head-admin"></vu>
 </head>
-<body>
+<body class="sidebar-icon-only">
 <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav th:replace="fragments/header-admin :: header"></nav>
@@ -55,76 +37,9 @@
                             </div>
                         </div>
                         <div class="inbox_chat">
-                            <div class="chat_list active_chat">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                    <div class="chat_ib">
-                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
-                                    </div>
-                                </div>
-                            </div>
+<!--   list chat -->
+
+
                         </div>
                     </div>
                     <div class="mesgs">
@@ -191,28 +106,29 @@
     <!-- page-body-wrapper ends -->
 </div>
 <!-- container-scroller -->
-<script>
-    document.querySelector("head").innerHTML += `<title>Tin nhắn</title>`
-</script>
-<!-- plugins:js -->
-<script src="/vendors/js/vendor.bundle.base.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<script src="/vendors/chart.js/Chart.min.js"></script>
-<script src="/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<script src="/vendors/progressbar.js/progressbar.min.js"></script>
+<div th:replace="fragments/script-admin">
 
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script src="/js/off-canvas.js"></script>
-<script src="/js/hoverable-collapse.js"></script>
-<script src="/js/template.js"></script>
-<script src="/js/settings.js"></script>
-<script src="/js/todolist.js"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="/js/dashboard.js"></script>
-<script src="/js/Chart.roundedBarCharts.js"></script>
+</div>
+<script>
+    function getListChat() {
+        let requestOptions = {
+            method: 'GET',
+        };
+        fetch("/api/v1/admin/chats", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    window.onload = () => {
+        getListChat()
+    }
+</script>
+<script>
+    document.querySelector("body > div > nav > div.text-center.navbar-brand-wrapper.d-flex.align-items-center.justify-content-start > div.me-3 > button > span").click();
+</script>
 <!-- End custom js for this page-->
 </body>
 

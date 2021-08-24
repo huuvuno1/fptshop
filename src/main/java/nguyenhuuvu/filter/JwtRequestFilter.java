@@ -24,6 +24,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        log.info("Di vao filter");
         String token = null;
         Cookie cookie = WebUtils.getCookie(request, "token");
         if (cookie != null)

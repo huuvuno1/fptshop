@@ -34,7 +34,6 @@ productsSlide.addEventListener('mousemove', e => {
   
 window.addEventListener('mouseup', e => {
     isDrag = false;
-    console.log("up")
 });
 
 productsSlide.addEventListener('mouseup', e => {

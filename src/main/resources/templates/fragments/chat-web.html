@@ -1,0 +1,54 @@
+<div class="ibox noselect flex" th:fragment="chat">
+    <div class="fr_chat" style="display: none;">
+        <div class="begin" style="display: block;">
+            <div class="fr_chat-title">
+                Nhập thông tin và bắt đầu để FPTShop phục vụ bạn tốt hơn nhé!
+            </div>
+            <div class="fr_chat-form">
+                <div>
+                    <input type="text" placeholder="* Tên" id="full_name" class="begin_input">
+                </div>
+                <div>
+                    <input type="text" placeholder="* Số điện thoại" id="phone_number" class="begin_input">
+                </div>
+                <div>
+                    <input type="text" placeholder="  Email" id="email" class="begin_input">
+                </div>
+                <div>
+                    <button class="begin_input btn_join">
+                        <i class="fad fa-paper-plane" style="margin-right: 5px;"></i>
+                        Bắt đầu trò truyện
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="fr_message" style="display: none;">
+            <div class="fr_chat-title margin_bt-15">
+                <div class="fr_message-menu">
+                    <i class="far fa-bars"></i>
+                </div>
+                <div class="fr_chatwith">
+                    <div class="fr_chatwith-avatar">
+                        <img src="/images/img/icon/wait.png" alt="">
+                    </div>
+                    <div id="chatwith_name">Đang tìm nhân viên...</div>
+                </div>
+            </div>
+            <div class="fr_chat-history flex">
+
+            </div>
+            <div class="fr_chat-send flex">
+                <input type="text" id="txtChat" placeholder="Viết phản hồi...">
+                <i class="fad fa-paper-plane" id="btn_send-chat"></i>
+            </div>
+        </div>
+    </div>
+    <div class="f_top">
+        <img draggable="false" class="img_chat noselect" src="/images/img/icon/chat.png" alt="">
+        <div id="txt_inl">Trò chuyện cùng FPT Shop</div>
+        <span id="close_chat" class="round">x</span>
+    </div>
+    <div class="round f_chat">
+        <i class="fas fa-comment-dots icon_chat"></i>
+    </div>
+</div>

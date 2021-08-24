@@ -4,4 +4,5 @@ import nguyenhuuvu.entity.User;
 
 public interface UserService {
     User findUserByUsername(String username);
+    User createSessionUser(User user);
 }

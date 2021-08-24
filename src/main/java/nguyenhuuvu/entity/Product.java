@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class Product {
+public class Product extends Common{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

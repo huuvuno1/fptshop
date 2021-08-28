@@ -1,6 +1,6 @@
 package nguyenhuuvu.filter;
 
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import nguyenhuuvu.utils.JwtTokenUtil;
 import org.springframework.security.core.Authentication;
@@ -18,7 +18,7 @@ import java.io.IOException;
 
 @Slf4j
 @Component
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class JwtRequestFilter extends OncePerRequestFilter {
     final JwtTokenUtil jwtTokenUtil;
 

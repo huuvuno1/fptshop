@@ -4,9 +4,11 @@ import lombok.RequiredArgsConstructor;
 import nguyenhuuvu.domain.StompPrincipal;
 import nguyenhuuvu.exception.UserHandleException;
 import nguyenhuuvu.utils.JwtTokenUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServletServerHttpRequest;
 import org.springframework.web.socket.WebSocketHandler;
+import org.springframework.web.socket.server.RequestUpgradeStrategy;
 import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 import org.springframework.web.util.WebUtils;
 
@@ -14,10 +16,15 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 import java.util.Map;
-
-@RequiredArgsConstructor
+//
+//@RequiredArgsConstructor
 public class CustomHandshakeHandler extends DefaultHandshakeHandler {
     final JwtTokenUtil jwtTokenUtil;
+
+    @Autowired
+    public CustomHandshakeHandler(JwtTokenUtil jwtTokenUtil) {
+        this.jwtTokenUtil = jwtTokenUtil;
+    }
 
     @Override
     protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {

@@ -38,7 +38,7 @@ public class JwtTokenUtil {
 
     public String generateToken(String username) {
         User user = userRepository.findUserByUsername(username);
-        String authorities = user.getRoles().stream().map(Role::getName).collect(Collectors.joining(","));
+        String authorities = user.getRoles().stream().map(u -> u.getName()).collect(Collectors.joining(","));
         return doGenerateToken(username, authorities);
     }
 

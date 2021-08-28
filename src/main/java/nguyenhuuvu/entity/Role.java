@@ -14,4 +14,8 @@ public class Role {
     private String name;
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "roles")
     private List<User> users;
+
+    public String getName() {
+        return name;
+    }
 }

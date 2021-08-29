@@ -18,9 +18,10 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class CustomHandshakeHandler extends DefaultHandshakeHandler {
     final JwtTokenUtil jwtTokenUtil;
-
+    boolean test = false;
     @Override
     protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
+        System.out.println("Da vao custom");
         HttpServletRequest servletRequest = ((ServletServerHttpRequest) request).getServletRequest();
         Cookie cookie = WebUtils.getCookie(servletRequest, "token");
         if (cookie != null) {
@@ -34,7 +35,13 @@ public class CustomHandshakeHandler extends DefaultHandshakeHandler {
             }
         }
         else {
-            throw new UserHandleException("User is not defined");
+            if (!test) {
+                test = true;
+                return new StompPrincipal("okeem");
+            }
+            else
+                return new StompPrincipal("okeem2");
+            //throw new UserHandleException("User is not defined");
         }
         return null;
     }

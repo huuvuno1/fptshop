@@ -10,6 +10,7 @@ import nguyenhuuvu.utils.JwtTokenUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -60,14 +61,21 @@ public class ChatController {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
+    @MessageMapping
+    public void te(@Payload String a) {
+        System.out.println("oke : " + a);
+    }
+
+
     @MessageMapping("/send-chat")
-    public void chatTranfer(@Payload MessageDTO message) {
-        message.setSender("Nguyen Huu Vu");
-        message.setTime(new Date());
-        // save
-        if (message.getReceiver().equals("admin"))
-            webSocketService.sendNoticeToAdmin(message);
-        else
-            messagingTemplate.convertAndSendToUser(message.getReceiver(), "/chat/listen", message);
+    public void chatTranfer(@Payload String message) {
+        // message.setSender("Nguyen Huu Vu");
+        // message.setTime(new Date());
+        // // save
+        // if (message.getReceiver().equals("admin"))
+        //     webSocketService.sendNoticeToAdmin(message);
+        // else
+        System.out.println("send 1: " + message);
+        messagingTemplate.convertAndSendToUser("okeem", "/chat/listen", message);
     }
 }

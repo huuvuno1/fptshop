@@ -3,10 +3,10 @@ var stompClient = null;
 function connect() {
     let socket = new SockJS('/ws');
     stompClient = Stomp.over(socket);
-    stompClient.connect({}, function (frame) {
-        stompClient.subscribe('/user/chat/listen', function (data) {
-            receiveMessage(JSON.parse(data.body));
-        });
+    stompClient.connect({}, function (frame) {stompClient.subscribe('/user/chat/listen', function (data) {
+        receiveMessage(JSON.parse(data.body));
+    });
+
     }, function (error) {
         console.log(error)
     });
